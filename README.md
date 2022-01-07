@@ -14,11 +14,11 @@ There is an example how to use the react-native-multibar [Tabber Expo](https://g
 ## Install
 
 ```bash
-yarn add react-native-multibar
+yarn add @makivan8/react-native-multibar
 ```
 or
 ```bash
-npm i react-native-multibar
+npm i @makivan8/react-native-multibar
 ```
 
 ## Usage
