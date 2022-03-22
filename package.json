@@ -1,6 +1,6 @@
 {
   "name": "@makivan8/react-native-multibar",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "description": "MultiBar is a TabBar component with an advanced button to make extra actions.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -40,6 +40,6 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   }
 }
