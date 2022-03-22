@@ -14,7 +14,7 @@ var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
     __setModuleDefault(result, mod);
     return result;
 };
@@ -24,7 +24,7 @@ const React = __importStar(require("react"));
 const react_native_1 = require("react-native");
 const context_1 = require("../../context");
 const Styles_1 = require("./Styles");
-const MultiBarButton = ({ children, rotationDegrees, style, onPress }) => {
+exports.MultiBarButton = ({ children, rotationDegrees, style, onPress }) => {
     const { extrasVisible, setExtrasVisible } = React.useContext(context_1.MultiBarContext);
     const animated = React.useRef(new react_native_1.Animated.Value(0)).current;
     React.useEffect(() => {
@@ -46,12 +46,11 @@ const MultiBarButton = ({ children, rotationDegrees, style, onPress }) => {
     });
     return (<react_native_1.TouchableOpacity activeOpacity={0.9} onPress={handlePress}>
       <react_native_1.Animated.View style={[Styles_1.styles.contentContainer, {
-                transform: [
-                    { rotateZ }
-                ]
-            }, style]}>
+            transform: [
+                { rotateZ }
+            ]
+        }, style]}>
         {children}
       </react_native_1.Animated.View>
     </react_native_1.TouchableOpacity>);
 };
-exports.MultiBarButton = MultiBarButton;

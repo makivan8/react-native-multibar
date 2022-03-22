@@ -14,7 +14,7 @@ var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
     __setModuleDefault(result, mod);
     return result;
 };
@@ -24,8 +24,7 @@ const React = __importStar(require("react"));
 const react_native_1 = require("react-native");
 const MultiBarOverlay_1 = require("../MultiBarOverlay");
 const Styles_1 = require("./Styles");
-const BottomTabBarWrapper = ({ children, params }) => (<react_native_1.View pointerEvents="box-none" style={Styles_1.styles.container}>
+exports.BottomTabBarWrapper = ({ children, params }) => (<react_native_1.View pointerEvents="box-none" style={Object.assign(Object.assign({}, Styles_1.styles.container), params.style)}>
     <MultiBarOverlay_1.MultiBarOverlay params={params}/>
     {children}
   </react_native_1.View>);
-exports.BottomTabBarWrapper = BottomTabBarWrapper;

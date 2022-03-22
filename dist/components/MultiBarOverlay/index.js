@@ -14,7 +14,7 @@ var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
     __setModuleDefault(result, mod);
     return result;
 };
@@ -25,7 +25,7 @@ const react_native_1 = require("react-native");
 const context_1 = require("../../context");
 const Styles_1 = require("./Styles");
 const COMMON_DEGREES = 180;
-const MultiBarOverlay = ({ params }) => {
+exports.MultiBarOverlay = ({ params }) => {
     const { data, extrasVisible, overlayProps, setExtrasVisible } = React.useContext(context_1.MultiBarContext);
     const { expandingMode, iconSize, overlayRadius } = React.useMemo(() => {
         return Object.assign({
@@ -74,24 +74,23 @@ const MultiBarOverlay = ({ params }) => {
             outputRange: ['90deg', '0deg']
         });
         return (<react_native_1.Animated.View key={`extra_item_${idx}`} style={[Styles_1.styles.itemContainer, {
-                    left,
-                    top,
-                    width: iconSize,
-                    height: iconSize,
-                    transform: [
-                        { rotateZ }
-                    ]
-                }]} onTouchEnd={handleTouchEnd}>
+                left,
+                top,
+                width: iconSize,
+                height: iconSize,
+                transform: [
+                    { rotateZ }
+                ]
+            }]} onTouchEnd={handleTouchEnd}>
         {extrasRender({
-                params: params
-            })}
+            params: params
+        })}
       </react_native_1.Animated.View>);
     }), [animations, angleStep, data, iconSize, overlayRadius, surfaceSizeHalf, iconSizeHalf]);
     return (<react_native_1.Animated.View pointerEvents="box-none" style={[Styles_1.styles.container, {
-                width: surfaceSize,
-                height: overlayHeight
-            }]}>
+            width: surfaceSize,
+            height: overlayHeight
+        }]}>
       {itemsList}
     </react_native_1.Animated.View>);
 };
-exports.MultiBarOverlay = MultiBarOverlay;

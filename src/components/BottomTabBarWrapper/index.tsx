@@ -13,7 +13,7 @@ export const BottomTabBarWrapper: React.FC<Props> = ({
 }) => (
   <View
     pointerEvents="box-none"
-    style={styles.container}
+    style={{ ...styles.container, ...params.style }}
   >
     <MultiBarOverlay
       params={params}
